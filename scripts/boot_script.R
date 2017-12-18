@@ -34,3 +34,5 @@ for(i in 1:B) {
     p[i] <- hypers[5]
     if(i %% 100 == 0) print(i)
 }
+
+df <- data.frame(a1 = a1, b1 = b1, a2 = a2, b2 = b2, p = p)
