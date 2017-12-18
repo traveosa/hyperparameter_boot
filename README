@@ -1,1 +1,4 @@
-The purpose of this git repository is to attempt to establish some bootstrap confidence bounds on the hyperparameters of a gamma-poisson mixed model
+The purpose of this git repository is to attempt to establish some bootstrap
+confidence bounds and standard on the hyperparameters of a
+gamma-poisson mixed model. We also want to establish what the sampling
+distribution may look like.
