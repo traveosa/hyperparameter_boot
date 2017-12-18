@@ -36,3 +36,8 @@ for(i in 1:B) {
 }
 
 df <- data.frame(a1 = a1, b1 = b1, a2 = a2, b2 = b2, p = p)
+
+df_sub <- df[!grepl("autoHyper", df$a1),]
+mat_out <- apply(df_sub, 2, as.numeric)
+mat_out <- as.data.frame(mat_out)
+#mat_out <- mat_out[mat_out>0,]
