@@ -41,3 +41,17 @@ df_sub <- df[!grepl("autoHyper", df$a1),]
 mat_out <- apply(df_sub, 2, as.numeric)
 mat_out <- as.data.frame(mat_out)
 #mat_out <- mat_out[mat_out>0,]
+# mat_out <- mat_out[mat_out$a1>0,]
+# mat_out <- mat_out[mat_out$a2>0,]
+apply(mat_out, 2, min)
+hist(mat_out$a1[mat_out$a1<4])
+hist(mat_out$b1[mat_out$b1<1.2])
+hist(mat_out$a2[mat_out$a2<20])
+hist(mat_out$b2[mat_out$b2<20])
+hist(mat_out$p)
+mat_out <- mat_out[mat_out$a1 < 4,]
+mat_out <- mat_out[mat_out$b1 < 1.2,]
+mat_out <- mat_out[mat_out$a2 < 20,]
+mat_out <- mat_out[mat_out$b2 < 20,]
+pairs(mat_out)
+apply(mat_out, 2, quantile, probs = c(0.025, 0.975))
