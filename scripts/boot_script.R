@@ -55,3 +55,4 @@ mat_out <- mat_out[mat_out$a2 < 20,]
 mat_out <- mat_out[mat_out$b2 < 20,]
 pairs(mat_out)
 apply(mat_out, 2, quantile, probs = c(0.025, 0.975))
+write.csv(mat_out, "data/boot_sub.csv", row.names = FALSE)
